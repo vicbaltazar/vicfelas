@@ -25,7 +25,7 @@ export default function Home() {
               VicFelas — desenvolvedora FullStack
             </p>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink-plum/85 sm:text-base">
-              Aprendiz de TI na Viação Sertanezina e estudante de Ciências da
+              Aprendiz de ADM na Viação Sertanezina e estudante de Ciências da
               Computação, construindo projetos que misturam lógica de
               backend com temas que eu realmente gosto, como de Pokémon a MPB.
             </p>
