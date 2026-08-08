@@ -26,7 +26,7 @@ const quicksand = Quicksand({
 export const metadata: Metadata = {
   title: "Vitória Baltazar — VitóriaOS",
   description:
-    "Portfolio de Vitória Baltazar (VicFelas), desenvolvedora full stack. Projetos, stack e contato num desktop pastel.",
+    "Portfolio de Vitória Baltazar (VicFelas), desenvolvedora FullStack. Projetos, stack e contato num desktop pastel.",
 };
 
 export default function RootLayout({
