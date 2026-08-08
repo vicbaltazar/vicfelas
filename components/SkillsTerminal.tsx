@@ -3,11 +3,11 @@ import Window from "./Window";
 const skillGroups = [
   {
     label: "linguagens",
-    items: ["JavaScript", "TypeScript", "Java", "Python"],
+    items: ["JavaScript", "TypeScript", "Java (básico)", "Python"],
   },
   {
     label: "front-end",
-    items: ["React", "Next.js", "Tailwind CSS"],
+    items: ["HTML5", "React", "Next.js", "Tailwind CSS"],
   },
   {
     label: "back-end",
@@ -15,8 +15,12 @@ const skillGroups = [
   },
   {
     label: "ferramentas",
-    items: ["Git & GitHub", "Figma", "Power BI", "Linux"],
+    items: ["Git & GitHub", "Figma", "Power BI", "IntelliJ IDEA", "VS Code"],
   },
+  {
+    label: "sistemas operacionais",
+    items: ["Windows 10/11", "Linux Mint (em aprendizado)", "IOS Mobile"],
+  }
 ];
 
 export default function SkillsTerminal() {
