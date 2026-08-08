@@ -24,7 +24,7 @@ export default function SkillsTerminal() {
     <Window title="~/skills.sh" accent="lime" className="font-code">
       <p className="text-xs text-mauve-soft">
         <span className="text-lime-glow bg-ink-plum/90 px-1 rounded-sm">
-          vic@sertaozinho
+          vic@ribeiraopreto
         </span>
         <span className="mx-1">:~$</span> cat skills.sh
       </p>
@@ -48,7 +48,7 @@ export default function SkillsTerminal() {
       </div>
       <p className="mt-4 text-xs text-mauve-soft">
         <span className="text-lime-glow bg-ink-plum/90 px-1 rounded-sm">
-          vic@sertaozinho
+          vic@ribeiraopreto
         </span>
         <span className="mx-1">:~$</span>
         <span className="ml-1 inline-block h-3.5 w-2 translate-y-0.5 animate-blink bg-ink-plum align-middle" />
