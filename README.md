@@ -63,3 +63,4 @@ data/
 
 Funciona out-of-the-box na Vercel: importe o repositório e é só dar deploy,
 sem variáveis de ambiente necessárias.
+# vicfelas
