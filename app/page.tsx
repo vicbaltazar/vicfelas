@@ -27,13 +27,11 @@ export default function Home() {
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink-plum/85 sm:text-base">
               Aprendiz de TI na Viação Sertanezina e estudante de Ciências da
               Computação, construindo projetos que misturam lógica de
-              back-end com temas que eu realmente gosto — de Pokémon a MPB.
-              Curto interface com cara de sistema antigo, mas em tom pastel:
-              menos CRT preto e verde, mais disquete cor-de-rosa.
+              backend com temas que eu realmente gosto, como de Pokémon a MPB.
             </p>
             <div className="mt-5 flex flex-wrap gap-2 font-mono text-xs">
               <span className="rounded-full border border-ink-plum bg-pink-petal/50 px-3 py-1">
-                Sertãozinho, SP
+                Ribeirão Preto, SP
               </span>
               <span className="rounded-full border border-ink-plum bg-sky-powder/50 px-3 py-1">
                 Estácio — Ciência da Computação
@@ -77,15 +75,14 @@ export default function Home() {
               vamos trocar uma ideia?
             </h2>
             <p className="mt-2 max-w-md text-sm leading-relaxed text-ink-plum/80">
-              Aberta a estágios, projetos em parceria ou só uma conversa sobre
-              dev, tarô ou NCT.
+              Aberta a estágios, projetos em parceria ou só uma conversa.
             </p>
             <div className="mt-4 flex flex-wrap gap-3 font-mono text-sm">
               <a
-                href="mailto:vicfelas@gmail.com"
+                href="mailto:vicbaltazar287@icloud.com"
                 className="rounded-lg border-2 border-ink-plum bg-pink-petal px-4 py-2 font-bold text-ink-plum shadow-window transition-transform hover:-translate-y-0.5 hover:shadow-window-hover"
               >
-                ✉ vicfelas@gmail.com
+                ✉ vicbaltazar287@icloud.com
               </a>
               <a
                 href="https://github.com/vicbaltazar"
@@ -102,7 +99,7 @@ export default function Home() {
         <Dock />
 
         <footer className="mt-10 text-center font-mono text-[11px] text-mauve-soft">
-          VitóriaOS © {new Date().getFullYear()} — feito com Next.js e café
+          VitóriaOS © {new Date().getFullYear()} — feito com Next.js e Red Bull
           gelado
         </footer>
       </main>
