@@ -22,7 +22,7 @@ export default function Home() {
               <span className="ml-1 inline-block h-7 w-2.5 translate-y-1 animate-blink bg-pink-petal align-middle sm:h-8" />
             </h1>
             <p className="mt-1 font-mono text-sm text-mauve-soft">
-              VicFelas — desenvolvedora full stack
+              VicFelas — desenvolvedora FullStack
             </p>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink-plum/85 sm:text-base">
               Aprendiz de TI na Viação Sertanezina e estudante de Ciências da
