@@ -92,6 +92,14 @@ export default function Home() {
               >
                 ⌥ github.com/vicbaltazar
               </a>
+              <a
+                href="https://vicfelas-five.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-lg border-2 border-ink-plum bg-lime-glow px-4 py-2 font-bold text-ink-plum shadow-window transition-transform hover:-translate-y-0.5 hover:shadow-window-hover"
+              >
+                🔗 linktree
+              </a>
             </div>
           </Window>
         </div>
