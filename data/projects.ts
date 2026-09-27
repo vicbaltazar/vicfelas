@@ -26,6 +26,7 @@ export const projects: Project[] = [
       "Sistema de cadastro completo (criar, ler, atualizar, remover) inspirado no jogo Amor Doce, praticando operações de banco de dados do zero.",
     stack: ["JavaScript", "SQLite"],
     accent: "sky",
+    href: "https://github.com/vicbaltazar/amor-doce-crud"
   },
   {
     id: "sistema-bancario-pokemon",
@@ -35,24 +36,27 @@ export const projects: Project[] = [
       "Simulador de operações bancárias (depósito, saque, extrato) usando Pokémon como tema para tornar a lógica de back-end mais divertida de estudar.",
     stack: ["Python"],
     accent: "lime",
+    href: "https://github.com/vicbaltazar/sistema-bancario-pokemon"
   },
-  {
-    id: "powerbi-pokemon-dashboard",
-    title: "Power BI Pokémon Dashboard",
-    fileName: "dashboard-pkmn.pbix",
+    {
+    id: "convite-pra-sair",
+    title: "Convite pra Sair 💌",
+    fileName: "convite.love",
     description:
-      "Painel interativo cruzando estatísticas, tipos e gerações de Pokémon para praticar modelagem de dados e storytelling visual.",
-    stack: ["Power BI", "DAX"],
-    accent: "sky",
-  },
-  {
-    id: "3d-gallery",
-    title: "3D Gallery",
-    fileName: "galeria-3d.app",
-    description:
-      "Galeria virtual com navegação em espaço tridimensional para expor projetos e ilustrações de um jeito mais imersivo que uma grade comum.",
-    stack: ["JavaScript", "Three.js"],
+      "Convite interativo em HTML/CSS/JS puro, estilo boot de terminal + polaroids com memes do casal, terminando em confete quando o 'sim' é aceito.",
+    stack: ["HTML5", "CSS3", "JavaScript"],
     accent: "pink",
+    href: "https://github.com/vicbaltazar/convite-pra-sair",
+  },
+  {
+    id: "diario-do-chico-bento",
+    title: "Diário do Chico Bento",
+    fileName: "diario-chico.blog",
+    description:
+      "Blog em Next.js dedicado às aventuras do meu gato Chico Bento, com diário de posts, galeria de fotos e uma página conhecendo ele melhor.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    accent: "sky",
+    href: "https://github.com/vicbaltazar/diario-chico-bento",
   },
   {
     id: "unirota",
@@ -60,7 +64,8 @@ export const projects: Project[] = [
     fileName: "unirota.site",
     description:
       "Landing page para um sistema de transporte universitário, com foco em clareza de horários e rotas para quem depende do van escolar.",
-    stack: ["React", "Tailwind CSS"],
+    stack: ["JSON"],
     accent: "lime",
+    href: "https://github.com/vicbaltazar/Cadastro_universitario"
   },
 ];
