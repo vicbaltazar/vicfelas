@@ -11,7 +11,18 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Window title={project.fileName} accent={project.accent}>
       <h3 className="font-mono text-base font-bold text-ink-plum">
-        {project.title}
+        {project.href ? (
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noreferrer"
+            className="underline decoration-2 underline-offset-2 decoration-transparent transition-colors hover:decoration-current"
+          >
+            {project.title} ↗
+          </a>
+        ) : (
+          project.title
+        )}
       </h3>
       <p className="mt-2 text-sm leading-relaxed text-ink-plum/80">
         {project.description}
