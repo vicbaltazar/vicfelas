@@ -17,6 +17,7 @@ export const projects: Project[] = [
       "Catálogo estilo Pokédex para artistas e álbuns de MPB, com fichas navegáveis e busca por época e estilo.",
     stack: ["React", "Node.js", "PostgreSQL"],
     accent: "pink",
+    href: "https://github.com/vicbaltazar/mpb-dex"
   },
   {
     id: "amor-doce-crud",
