@@ -11,8 +11,7 @@ import { projects } from "@/data/projects";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-tr from-[#ff00ff] via-[#ffff00] to-[#00ffcc] bg-[length:400%_400%] animate-gradientBG overflow-x-hidden relative p-2 sm:p-6">
-      
-      {/* 🐸 Stickers Caóticos Flutuantes Extra */}
+
       <div className="absolute top-12 left-4 text-4xl animate-bounce z-20 pointer-events-none">🐸</div>
       <div className="absolute top-28 right-6 text-5xl rotate-12 z-20 pointer-events-none">✨🐬</div>
       <div className="absolute top-1/3 left-2 text-4xl -rotate-12 z-20 pointer-events-none">🐱🐾</div>
