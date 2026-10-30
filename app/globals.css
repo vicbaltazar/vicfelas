@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradientBG {
+  animation: gradientBG 10s ease infinite;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -9,12 +19,9 @@ html {
 body {
   background-color: #fffaf3;
   color: #3d2b3f;
-  background-image:
-    radial-gradient(circle at 1px 1px, rgba(61, 43, 63, 0.06) 1px, transparent 0);
-  background-size: 22px 22px;
 }
 
-/* subtle CRT scanline vignette, kept faint on purpose */
+/* Restante do teu CSS (CRT, scrollbars, etc.) mantém-se igual... */
 .crt-overlay {
   pointer-events: none;
   position: fixed;
@@ -43,7 +50,6 @@ body {
   color: #3d2b3f;
 }
 
-/* custom scrollbar to match the OS chrome */
 ::-webkit-scrollbar {
   width: 12px;
 }
