@@ -184,7 +184,7 @@ export default function Home() {
               <div className="flex flex-col items-center justify-center text-center md:col-span-4">
                 <div className="relative flex h-28 w-28 items-center justify-center overflow-hidden rounded-full border-2 border-dashed border-[#f48fb1] bg-[#fff5f9] p-1">
                   <img
-                    src="/image/channels4_profile.jpg"
+                    src="channels4_profile.jpg"
                     alt="Chico Bento — Chefe de QA"
                     className="h-full w-full rounded-full object-cover"
                   />
