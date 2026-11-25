@@ -1,232 +1,311 @@
-import MenuBar from "@/components/MenuBar";
-import Window from "@/components/Window";
 import ProjectCard from "@/components/ProjectCard";
 import SkillsTerminal from "@/components/SkillsTerminal";
 import PortfolioChatbot from "@/components/PortfolioChatbot";
 import PokemonParty from "@/components/PokemonParty";
-import Dock from "@/components/Dock";
 import { projects } from "@/data/projects";
 
-const stamps = [
-  "♡ neocities vibes",
-  "✿ pixel safari inspired",
-  "🐈‍⬛ chico bento approved",
-  "★ fullstack & frontend",
-  "♪ mpb & pokemon",
+const navItems = [
+  { label: "Sobre", href: "#sobre" },
+  { label: "Projetos", href: "#projetos" },
+  { label: "Skills", href: "#skills" },
+  { label: "Pokémon", href: "#pokemon" },
+  { label: "GenIA", href: "#genia" },
+  { label: "Contato", href: "#contato" },
+];
+
+const quickButtons = [
+  { label: "GitHub", href: "https://github.com/vicbaltazar" },
+  { label: "Linktree", href: "https://vicfelas-five.vercel.app/" },
+  { label: "Projetos", href: "#projetos" },
+  { label: "Skills", href: "#skills" },
+  { label: "Pokémon", href: "#pokemon" },
+  { label: "Contato", href: "#contato" },
+];
+
+const miniStamps = [
+  { text: "VitóriaOS", bg: "bg-[#ffd6e4] text-[#8f294b]" },
+  { text: "Next.js 14", bg: "bg-[#d9f3ff] text-[#1e4e68]" },
+  { text: "Chico Bento 🐈‍⬛", bg: "bg-[#fff3c4] text-[#6b4f12]" },
+  { text: "MPB Lover ♪", bg: "bg-[#e7f7c8] text-[#3a5414]" },
+  { text: "Pixel Art ♡", bg: "bg-[#f3dcff] text-[#582873]" },
+  { text: "Best on PC", bg: "bg-[#ffe2d1] text-[#733617]" },
 ];
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden text-[#3d2b3f]">
-      {/* Pequenos detalhes decorativos flutuantes discretos */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none fixed left-3 top-24 z-20 hidden text-xl opacity-80 lg:block"
-      >
-        ✿
-      </div>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none fixed right-4 top-36 z-20 hidden text-xl opacity-80 lg:block"
-      >
-        ♡
-      </div>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none fixed bottom-28 left-4 z-20 hidden text-xl opacity-80 lg:block"
-      >
-        ★
-      </div>
+    <div id="topo" className="min-h-screen px-2 py-0 sm:px-4">
+      {/* COLUNA CENTRAL ESTILO PIXEL SAFARI */}
+      <div className="safari-shell mx-auto min-h-screen max-w-[820px]">
+        {/* 1. BANNER DO TOPO */}
+        <header className="relative overflow-hidden border-b-2 border-[#f48fb1] bg-[linear-gradient(135deg,#ffd6e7_0%,#fff4d2_48%,#d2f3f8_100%)] px-4 py-7 text-center">
+          {/* Estrelinhas e gatinho decorativos */}
+          <div className="mx-auto flex max-w-xl items-center justify-center gap-3">
+            <img
+              src="/cat52.gif"
+              alt="Gatinho pixel art"
+              className="pixel-art h-11 w-11 object-contain"
+            />
+            <h1 className="safari-title-shadow font-mono text-3xl font-extrabold tracking-tight text-[#b83b62] sm:text-5xl">
+              vitória<span className="text-[#4a8fa3]">OS</span>
+            </h1>
+            <img
+              src="/cat52.gif"
+              alt="Gatinho pixel art"
+              className="pixel-art h-11 w-11 -scale-x-100 object-contain"
+            />
+          </div>
+          <p className="mt-1 font-mono text-[11px] font-bold tracking-widest text-[#7d4963] uppercase">
+            ★ personal web archive &amp; fullstack portfolio ★
+          </p>
+        </header>
 
-      <MenuBar />
+        {/* 2. BARRA DE NAVEGAÇÃO ROSA */}
+        <nav
+          aria-label="Menu principal"
+          className="safari-navbar sticky top-0 z-30 flex flex-wrap items-center justify-center gap-x-5 gap-y-1 px-3 py-1.5 font-mono text-xs font-bold text-white"
+        >
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="px-1.5 py-0.5 [text-shadow:1px_1px_0px_#a62c52] hover:underline"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
 
-      <main
-        id="topo"
-        className="relative z-10 mx-auto max-w-5xl px-4 pb-16 pt-8 sm:px-6"
-      >
-        {/* HERO / SOBRE */}
-        <div id="sobre" className="scroll-mt-24">
-          <Window title="~/sobre.txt" accent="pink">
-            <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
-              <div className="flex-1">
-                <div className="flex flex-wrap items-center gap-2 font-mono text-xs">
-                  <span className="border border-[#3d2b3f] bg-[#ffe4ec] px-2 py-0.5 font-bold text-[#3d2b3f]">
-                    bem-vinda ao vitoria.os ♡
-                  </span>
-                  <span className="border border-dashed border-[#c49bb3] bg-[#fffaf3] px-2 py-0.5 text-[#6d5072]">
-                    arquivo pessoal &amp; dev log
-                  </span>
-                </div>
+        {/* CONTEÚDO PRINCIPAL */}
+        <main className="px-4 py-6 sm:px-7">
+          {/* 3. BOAS-VINDAS CENTRALIZADO */}
+          <section id="sobre" className="scroll-mt-14 text-center">
+            <div className="flex items-center justify-center gap-2">
+              <span className="text-lg">🌸</span>
+              <h2 className="font-mono text-xl font-extrabold text-[#c94a72] sm:text-2xl [text-shadow:1px_1px_0px_#ffd6e4]">
+                Welcome to Vitória&apos;s Portfolio!
+              </h2>
+              <span className="text-lg">🌸</span>
+            </div>
 
-                <h1 className="mt-3 font-mono text-3xl font-extrabold tracking-tight text-[#3d2b3f] sm:text-5xl">
-                  Vitória Baltazar
-                  <span className="ml-1.5 inline-block h-6 w-2 translate-y-0.5 animate-pulse bg-[#c96b8b] align-middle sm:h-8" />
-                </h1>
+            <p className="mt-1.5 font-mono text-xs font-bold text-[#5e3a4d]">
+              ˖⁺‧₊˚✦ Desenvolvedora FullStack &amp; Estudante de Ciência da Computação ✦˚₊‧⁺˖
+            </p>
 
-                <p className="mt-2 inline-block border border-[#3d2b3f] bg-[#e2f5f8] px-2.5 py-1 font-mono text-xs sm:text-sm font-bold text-[#3d2b3f] shadow-[2px_2px_0px_#3d2b3f]">
-                  VicFelas — Desenvolvedora FullStack &amp; Fã de Pokémon
-                </p>
+            <p className="mx-auto mt-3 max-w-2xl text-xs sm:text-[13px] leading-relaxed text-[#4a2c3d]">
+              Olá! Eu sou a <strong>Vitória Baltazar (VicFelas)</strong>, aprendiz de ADM na
+              Viação Sertanezina e graduanda em Ciência da Computação. Este é o meu cantinho
+              na web — onde reúno meus projetos em React, Next.js, TypeScript e Python,
+              supervisionados pelo meu gato <strong>Chico Bento</strong> e ao som de muita MPB.
+            </p>
 
-                <p className="mt-4 max-w-2xl border border-dashed border-[#c49bb3] bg-[#fffaf3] p-3.5 text-sm sm:text-base leading-relaxed text-[#3d2b3f]">
-                  Aprendiz de ADM na Viação Sertanezina e estudante de Ciência da
-                  Computação. Gosto de criar interfaces criativas, projetos
-                  pessoais cheios de personalidade e código funcional — tudo sob a
-                  supervisão atenta do meu gato Chico Bento e ouvindo MPB.
-                </p>
+            <p className="mt-1 font-mono text-[10px] italic text-[#8a5c73]">
+              Feito com carinho em Sertãozinho / Ribeirão Preto, SP • Melhor visualizado com cafézinho ☕
+            </p>
 
-                <div className="mt-4 flex flex-wrap gap-2 font-mono text-xs">
-                  <span className="border-[1.5px] border-[#3d2b3f] bg-[#ffe4ec] px-3 py-1 font-bold text-[#3d2b3f] shadow-[2px_2px_0px_#3d2b3f]">
-                    📍 Sertãozinho / Ribeirão Preto, SP
-                  </span>
-                  <span className="border-[1.5px] border-[#3d2b3f] bg-[#e2f5f8] px-3 py-1 font-bold text-[#3d2b3f] shadow-[2px_2px_0px_#3d2b3f]">
-                    🎓 Ciência da Computação
-                  </span>
-                  <span className="border-[1.5px] border-[#3d2b3f] bg-[#eef7b8] px-3 py-1 font-bold text-[#3d2b3f] shadow-[2px_2px_0px_#3d2b3f]">
-                    ✿ Aberta a oportunidades
-                  </span>
-                </div>
+            {/* 4. FAIXA DE AVISO ESTILO PIXEL SAFARI */}
+            <div className="mx-auto mt-4 max-w-xl border border-[#8fa858] bg-[#eef8c8] px-3 py-1.5 font-mono text-[11px] font-bold text-[#3f5219] shadow-[1px_1px_0px_#ffffff_inset]">
+              ⚠️ Este portfólio contém alta dose de pixel art, Pokémon e MPB. Explore à vontade! ✿
+            </div>
+
+            {/* 5. FILEIRA DE BOTÕES ROSA 3D */}
+            <div className="mt-4">
+              <p className="mb-2 font-mono text-[11px] text-[#6e465b]">
+                Navegue rápido pelas seções e links:
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-2 font-mono text-xs font-bold">
+                {quickButtons.map((btn) => (
+                  <a
+                    key={btn.label}
+                    href={btn.href}
+                    target={btn.href.startsWith("http") ? "_blank" : undefined}
+                    rel={btn.href.startsWith("http") ? "noreferrer" : undefined}
+                    className="safari-pill-btn px-3 py-1"
+                  >
+                    {btn.label}
+                  </a>
+                ))}
               </div>
+            </div>
+          </section>
 
-              {/* Cartão lateral fofo estilo cantinho do Pixel Safari */}
-              <aside className="w-full shrink-0 border-2 border-[#3d2b3f] bg-[#fffaf3] p-3 font-mono text-xs shadow-[inset_1px_1px_0px_#ffffff,3px_3px_0px_#3d2b3f] sm:w-52">
-                <div className="mb-2 flex items-center justify-between border-b border-dashed border-[#c49bb3] pb-1.5 font-bold text-[#3d2b3f]">
-                  <span>status.txt</span>
-                  <span className="text-[#c96b8b]">● on</span>
-                </div>
-
-                <div className="flex items-center gap-2.5 border border-[#3d2b3f] bg-[#fffdf9] p-2">
-                  <img
-                    src="/cat52.gif"
-                    alt="Pixel art de gatinho"
-                    className="pixel-art h-10 w-10 shrink-0 object-contain"
-                  />
-                  <div className="leading-snug">
-                    <p className="font-bold text-[#3d2b3f]">Chico Bento</p>
-                    <p className="text-[11px] text-[#6d5072]">chefe de QA 🐈‍⬛</p>
+          {/* 6. CAIXA COM BORDA DE RENDA (CONTADOR + STATUS + DID YOU KNOW?) */}
+          <section className="safari-lace-box mt-6 p-4 sm:p-5">
+            <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-12">
+              {/* Coluna Esquerda: Status + Contador Retrô */}
+              <div className="flex flex-col items-center gap-2.5 text-center md:col-span-4">
+                <div className="w-full border border-[#d69b27] bg-[repeating-linear-gradient(-45deg,#ffe066,#ffe066_8px,#4a2c3d_8px,#4a2c3d_16px)] p-1">
+                  <div className="bg-[#fffdf5] px-2 py-0.5 font-mono text-[11px] font-extrabold text-[#4a2c3d]">
+                    🚧 Sempre em evolução!
                   </div>
                 </div>
 
-                <ul className="mt-2.5 space-y-1 text-[11px] text-[#3d2b3f]">
-                  <li className="border border-dashed border-[#d8b4c8] bg-[#fffdf9] px-2 py-1">
-                    <strong>mood:</strong> codando &amp; ouvindo MPB
-                  </li>
-                  <li className="border border-dashed border-[#d8b4c8] bg-[#fffdf9] px-2 py-1">
-                    <strong>stack:</strong> Next.js, TS, Tailwind
-                  </li>
-                </ul>
-              </aside>
+                {/* Badges de identidade / interesses */}
+                <div className="flex flex-wrap justify-center gap-1.5 font-mono text-[10px] font-bold">
+                  <span className="border border-[#f48fb1] bg-[#ffe4ec] px-2 py-0.5 text-[#8f294b]">
+                    FullStack Dev
+                  </span>
+                  <span className="border border-[#81d4fa] bg-[#e1f5fe] px-2 py-0.5 text-[#1c5470]">
+                    CC Student
+                  </span>
+                  <span className="border border-[#ce93d8] bg-[#f3e5f5] px-2 py-0.5 text-[#5b246b]">
+                    Estágio TI
+                  </span>
+                </div>
+
+                {/* Hit Counter estilo Pixel Safari */}
+                <div className="w-full rounded-lg border-2 border-dotted border-[#f48fb1] bg-[#fff5f9] p-2 font-mono">
+                  <p className="text-[10px] font-bold text-[#b83b62]">
+                    VitóriaOS já recebeu...
+                  </p>
+                  <div className="my-1 inline-flex gap-0.5 border border-[#4a2c3d] bg-[#2b1823] px-1.5 py-0.5 text-xs font-bold tracking-widest text-[#ff9ebb]">
+                    <span>0</span>
+                    <span>0</span>
+                    <span>2</span>
+                    <span>0</span>
+                    <span>2</span>
+                    <span>6</span>
+                  </div>
+                  <p className="text-[10px] text-[#7d4963]">
+                    visitas desde 2026! Wow ♡
+                  </p>
+                </div>
+              </div>
+
+              {/* Coluna Central: Mascote / Destaque Visual */}
+              <div className="flex flex-col items-center justify-center text-center md:col-span-4">
+                <div className="relative flex h-28 w-28 items-center justify-center rounded-full border-2 border-dashed border-[#f48fb1] bg-[#fff5f9]">
+                  <img
+                    src="/cat52.gif"
+                    alt="Chico Bento Pixel Mascot"
+                    className="pixel-art h-16 w-16 object-contain"
+                  />
+                </div>
+                <span className="mt-2 border border-[#f48fb1] bg-[#ffe4ec] px-2.5 py-0.5 font-mono text-[11px] font-bold text-[#8f294b]">
+                  Chico Bento • Chefe de QA 🐾
+                </span>
+              </div>
+
+              {/* Coluna Direita: Caixinha "Did you know?" igual da foto */}
+              <div className="md:col-span-4">
+                <div className="safari-sticky-note p-3 font-mono text-[11px] text-[#4a3e12]">
+                  <p className="mb-1 border-b border-[#c9be6b] pb-1 font-extrabold">
+                    💡 Você sabia?
+                  </p>
+                  <p className="leading-snug">
+                    Este site foi construído em Next.js e TypeScript inspirado na
+                    estética clássica do Neocities! Novos projetos e experimentos são
+                    adicionados constantemente.
+                  </p>
+                  <label className="mt-2 flex items-center gap-1.5 text-[10px] text-[#6b5d24]">
+                    <input
+                      type="checkbox"
+                      defaultChecked
+                      className="accent-[#f4729b]"
+                    />
+                    <span>Modo fofura ativado</span>
+                  </label>
+                </div>
+              </div>
             </div>
 
-            {/* Faixa de stamps / selos retrô */}
-            <div className="mt-5 flex flex-wrap gap-2 border-t border-dashed border-[#c49bb3] pt-4 font-mono text-[11px]">
-              {stamps.map((stamp) => (
-                <span
-                  key={stamp}
-                  className="border border-[#3d2b3f] bg-[#fffdf9] px-2.5 py-0.5 font-semibold text-[#5d4360] shadow-[1.5px_1.5px_0px_#3d2b3f]"
+            {/* 7. PROJETOS DENTRO DA ESTRUTURA */}
+            <div id="projetos" className="mt-7 scroll-mt-14 border-t-2 border-dashed border-[#f8bbd0] pt-5">
+              <div className="mb-3 flex items-center justify-between">
+                <h3 className="font-mono text-sm font-extrabold text-[#b83b62]">
+                  ✿ Meus Projetos ({projects.length})
+                </h3>
+                <span className="font-mono text-[11px] text-[#7d4963]">
+                  clique para ver no GitHub ↗
+                </span>
+              </div>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {projects.map((project) => (
+                  <ProjectCard key={project.id} project={project} />
+                ))}
+              </div>
+            </div>
+
+            {/* 8. SKILLS */}
+            <div id="skills" className="mt-7 scroll-mt-14 border-t-2 border-dashed border-[#f8bbd0] pt-5">
+              <h3 className="mb-3 font-mono text-sm font-extrabold text-[#b83b62]">
+                ★ Stack &amp; Ferramentas
+              </h3>
+              <SkillsTerminal />
+            </div>
+
+            {/* 9. POKÉMON PARTY */}
+            <div id="pokemon" className="mt-7 scroll-mt-14 border-t-2 border-dashed border-[#f8bbd0] pt-5">
+              <h3 className="mb-3 font-mono text-sm font-extrabold text-[#b83b62]">
+                ♡ Equipa Pokémon Favorita
+              </h3>
+              <PokemonParty />
+            </div>
+
+            {/* 10. GENIA CHATBOT */}
+            <div id="genia" className="mt-7 scroll-mt-14 border-t-2 border-dashed border-[#f8bbd0] pt-5">
+              <h3 className="mb-3 font-mono text-sm font-extrabold text-[#b83b62]">
+                🤖 Fale com a GenIA
+              </h3>
+              <PortfolioChatbot />
+            </div>
+
+            {/* 11. CONTATO */}
+            <div
+              id="contato"
+              className="mt-7 scroll-mt-14 border-t-2 border-dashed border-[#f8bbd0] pt-5 text-center"
+            >
+              <h3 className="font-mono text-sm font-extrabold text-[#b83b62]">
+                ✉ Vamos conversar?
+              </h3>
+              <p className="mx-auto mt-1 max-w-md font-mono text-xs text-[#5e3a4d]">
+                Aberta a oportunidades de estágio em TI, projetos web ou papo sobre Pokémon e MPB!
+              </p>
+              <div className="mt-3 flex flex-wrap justify-center gap-2 font-mono text-xs font-bold">
+                <a
+                  href="mailto:vicbaltazar287@icloud.com"
+                  className="safari-pill-btn px-3.5 py-1.5"
                 >
-                  {stamp}
+                  ✉ vicbaltazar287@icloud.com
+                </a>
+                <a
+                  href="https://github.com/vicbaltazar"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="safari-pill-btn px-3.5 py-1.5"
+                >
+                  ⌥ github.com/vicbaltazar
+                </a>
+                <a
+                  href="https://vicfelas-five.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="safari-pill-btn px-3.5 py-1.5"
+                >
+                  🔗 linktree
+                </a>
+              </div>
+            </div>
+          </section>
+
+          {/* 12. FILEIRA DE 88x31 STAMPS / BUTTONS NO RODAPÉ (IGUAL AO PIXEL SAFARI) */}
+          <footer className="mt-5 text-center">
+            <div className="flex flex-wrap items-center justify-center gap-1.5">
+              {miniStamps.map((stamp) => (
+                <span
+                  key={stamp.text}
+                  className={`inline-flex h-[31px] w-[88px] items-center justify-center border border-[#4a2c3d] px-1 font-mono text-[9px] font-extrabold leading-none shadow-[1px_1px_0px_#ffffff_inset] ${stamp.bg}`}
+                >
+                  {stamp.text}
                 </span>
               ))}
             </div>
-          </Window>
-        </div>
 
-        {/* PROJETOS */}
-        <div id="projetos" className="mt-10 scroll-mt-24">
-          <div className="mb-4 flex flex-wrap items-center justify-between gap-2 border-2 border-[#3d2b3f] bg-[#ffe4ec] px-3.5 py-2 shadow-[3px_3px_0px_#3d2b3f]">
-            <h2 className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3d2b3f]">
-              ✿ /projetos — vitrine de criações
-            </h2>
-            <span className="border border-[#3d2b3f] bg-[#fffdf9] px-2 py-0.5 font-mono text-[11px] font-bold text-[#3d2b3f]">
-              {projects.length} projetos
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {projects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-        </div>
-
-        {/* SKILLS */}
-        <div id="skills" className="mt-10 scroll-mt-24">
-          <div className="mb-4 flex items-center justify-between border-2 border-[#3d2b3f] bg-[#eef7b8] px-3.5 py-2 shadow-[3px_3px_0px_#3d2b3f]">
-            <h2 className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3d2b3f]">
-              ★ /skills — caixinha de ferramentas
-            </h2>
-          </div>
-          <SkillsTerminal />
-        </div>
-
-        {/* POKEMON PARTY */}
-        <div id="pokemon" className="mt-10 scroll-mt-24">
-          <div className="mb-4 flex items-center justify-between border-2 border-[#3d2b3f] bg-[#e2f5f8] px-3.5 py-2 shadow-[3px_3px_0px_#3d2b3f]">
-            <h2 className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3d2b3f]">
-              ♡ /favoritos — time pokémon
-            </h2>
-          </div>
-          <PokemonParty />
-        </div>
-
-        {/* GENIA CHATBOT */}
-        <div id="genia" className="mt-10 scroll-mt-24">
-          <div className="mb-4 flex items-center justify-between border-2 border-[#3d2b3f] bg-[#ffe4ec] px-3.5 py-2 shadow-[3px_3px_0px_#3d2b3f]">
-            <h2 className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3d2b3f]">
-              ✿ /genia — assistente do sistema
-            </h2>
-          </div>
-          <PortfolioChatbot />
-        </div>
-
-        {/* CONTATO */}
-        <div id="contato" className="mt-10 scroll-mt-24">
-          <Window title="contato.exe" accent="sky">
-            <h2 className="inline-block border-2 border-[#3d2b3f] bg-[#eef7b8] px-2.5 py-1 font-mono text-base sm:text-lg font-bold text-[#3d2b3f] shadow-[2px_2px_0px_#3d2b3f]">
-              vamos trocar uma ideia? ✉ ♡
-            </h2>
-            <p className="mt-3 max-w-lg border border-dashed border-[#c49bb3] bg-[#fffaf3] p-3 text-sm leading-relaxed text-[#3d2b3f]">
-              Aberta a estágios, freelas, troca de ideias sobre front-end/full-stack
-              ou conversas sobre Pokémon e MPB.
+            <p className="mt-3 font-mono text-[11px] text-[#7d4963]">
+              VitóriaOS © {new Date().getFullYear()} • inspirado na estética Pixel Safari / Neocities ♡
             </p>
-            <div className="mt-4 flex flex-wrap gap-3 font-mono text-xs sm:text-sm">
-              <a
-                href="mailto:vicbaltazar287@icloud.com"
-                className="border-2 border-[#3d2b3f] bg-[#ffe4ec] px-4 py-2 font-bold text-[#3d2b3f] shadow-[3px_3px_0px_#3d2b3f] transition-all hover:-translate-y-0.5 hover:bg-[#ffd1e0] active:translate-y-0 active:shadow-none"
-              >
-                ✉ vicbaltazar287@icloud.com
-              </a>
-              <a
-                href="https://github.com/vicbaltazar"
-                target="_blank"
-                rel="noreferrer"
-                className="border-2 border-[#3d2b3f] bg-[#e2f5f8] px-4 py-2 font-bold text-[#3d2b3f] shadow-[3px_3px_0px_#3d2b3f] transition-all hover:-translate-y-0.5 hover:bg-[#cbeff5] active:translate-y-0 active:shadow-none"
-              >
-                ⌥ github.com/vicbaltazar
-              </a>
-              <a
-                href="https://vicfelas-five.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-                className="border-2 border-[#3d2b3f] bg-[#eef7b8] px-4 py-2 font-bold text-[#3d2b3f] shadow-[3px_3px_0px_#3d2b3f] transition-all hover:-translate-y-0.5 hover:bg-[#e3f296] active:translate-y-0 active:shadow-none"
-              >
-                🔗 linktree
-              </a>
-            </div>
-          </Window>
-        </div>
-
-        <Dock />
-
-        <footer className="mt-14 border-2 border-[#3d2b3f] bg-[#fffdf9] p-4 text-center font-mono text-xs text-[#3d2b3f] shadow-[inset_1px_1px_0px_#ffffff,4px_4px_0px_#3d2b3f]">
-          <p className="font-bold">
-            VitóriaOS © {new Date().getFullYear()} — feito com carinho, Next.js &amp; estética indie web ♡
-          </p>
-          <p className="mt-1 text-[11px] text-[#6d5072]">
-            melhor visualizado com um energético e o Chico Bento por perto 🐈‍⬛
-          </p>
-        </footer>
-      </main>
+          </footer>
+        </main>
+      </div>
     </div>
   );
 }
