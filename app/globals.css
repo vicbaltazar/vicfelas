@@ -8,8 +8,17 @@
   100% { background-position: 0% 50%; }
 }
 
+@keyframes floatPixel {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
 .animate-gradientBG {
   animation: gradientBG 10s ease infinite;
+}
+
+.animate-float-pixel {
+  animation: floatPixel 2.5s steps(2, end) infinite;
 }
 
 html {
@@ -19,9 +28,77 @@ html {
 body {
   background-color: #fffaf3;
   color: #3d2b3f;
+  background-image:
+    linear-gradient(to right, rgba(255, 182, 193, 0.22) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 182, 193, 0.22) 1px, transparent 1px),
+    radial-gradient(rgba(176, 224, 230, 0.35) 1.5px, transparent 1.5px);
+  background-size: 20px 20px, 20px 20px, 40px 40px;
+  background-position: 0 0, 0 0, 10px 10px;
 }
 
-/* Restante do teu CSS (CRT, scrollbars, etc.) mantém-se igual... */
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.pixel-window {
+  background-color: #fffdf9;
+  border: 2px solid #3d2b3f;
+  box-shadow:
+    inset 2px 2px 0px #ffffff,
+    inset -2px -2px 0px #f3e5f5,
+    4px 4px 0px #3d2b3f;
+}
+
+.pixel-window-bar {
+  border-bottom: 2px solid #3d2b3f;
+  background: repeating-linear-gradient(
+    -45deg,
+    #ffd6e0,
+    #ffd6e0 8px,
+    #fff0f5 8px,
+    #fff0f5 16px
+  );
+}
+
+.pixel-dotted-box {
+  background-color: #fffaf3;
+  border: 2px dashed #c49bb3;
+}
+
+.pixel-btn {
+  background-color: #fffdf9;
+  border: 2px solid #3d2b3f;
+  box-shadow: 2px 2px 0px #3d2b3f;
+  transition: transform 0.06s steps(2), box-shadow 0.06s steps(2), background-color 0.1s ease;
+}
+
+.pixel-btn:hover {
+  background-color: #ffe8ef;
+}
+
+.pixel-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #3d2b3f;
+}
+
+.pixel-tag {
+  background-color: #e6f6f8;
+  border: 1.5px solid #3d2b3f;
+  box-shadow: 1.5px 1.5px 0px #3d2b3f;
+}
+
+.pixel-divider {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(
+    to right,
+    #ffb6c1 50%,
+    transparent 50%
+  );
+  background-size: 8px 2px;
+}
+
 .crt-overlay {
   pointer-events: none;
   position: fixed;
@@ -42,7 +119,7 @@ body {
   position: fixed;
   inset: 0;
   z-index: 49;
-  box-shadow: inset 0 0 180px rgba(61, 43, 63, 0.18);
+  box-shadow: inset 0 0 180px rgba(61, 43, 63, 0.14);
 }
 
 ::selection {
@@ -51,16 +128,21 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 14px;
+  height: 14px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #fffaf3;
+  background: #fff3f6;
+  border-left: 2px solid #3d2b3f;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #b0e0e6;
-  border: 3px solid #fffaf3;
-  border-radius: 999px;
+  border: 2px solid #3d2b3f;
+  box-shadow: inset 1px 1px 0px #ffffff;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #ffb6c1;
 }
