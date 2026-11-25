@@ -33,7 +33,17 @@ const miniStamps = [
 
 export default function Home() {
   return (
-    <div id="topo" className="min-h-screen px-2 py-0 sm:px-4">
+    <div
+      id="topo"
+      className="min-h-screen px-2 py-0 sm:px-4"
+      style={{
+        backgroundColor: "#fff5f8",
+        backgroundImage: 'url("/bg-kittens.jpeg")',
+        backgroundRepeat: "repeat",
+        backgroundAttachment: "fixed",
+        backgroundSize: "480px auto",
+      }}
+    >
       {/* COLUNA CENTRAL ESTILO PIXEL SAFARI */}
       <div className="safari-shell mx-auto min-h-screen max-w-[820px]">
         {/* 1. BANNER DO TOPO */}
