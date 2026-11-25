@@ -7,109 +7,192 @@ import PokemonParty from "@/components/PokemonParty";
 import Dock from "@/components/Dock";
 import { projects } from "@/data/projects";
 
+const stamps = [
+  "♡ neocities vibes",
+  "✿ pixel safari inspired",
+  "🐈‍⬛ chico bento approved",
+  "★ fullstack & frontend",
+  "♪ mpb & pokemon",
+];
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-[#ff00ff] via-[#ffff00] to-[#00ffcc] bg-[length:400%_400%] animate-gradientBG overflow-x-hidden relative p-2 sm:p-6">
-
-      <div className="absolute top-12 left-4 text-4xl animate-bounce z-20 pointer-events-none">🐸</div>
-      <div className="absolute top-28 right-6 text-5xl rotate-12 z-20 pointer-events-none">✨🐬</div>
-      <div className="absolute top-1/3 left-2 text-4xl -rotate-12 z-20 pointer-events-none">🐱🐾</div>
-      <div className="absolute top-1/2 right-4 text-4xl rotate-45 z-20 pointer-events-none">⚡</div>
-      <div className="absolute bottom-1/4 left-6 text-4xl -rotate-6 z-20 pointer-events-none">🎵🎸</div>
-      <div className="absolute bottom-10 right-10 text-5xl rotate-12 z-20 pointer-events-none">👾</div>
+    <div className="relative min-h-screen overflow-x-hidden text-[#3d2b3f]">
+      {/* Pequenos detalhes decorativos flutuantes discretos */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed left-3 top-24 z-20 hidden text-xl opacity-80 lg:block"
+      >
+        ✿
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed right-4 top-36 z-20 hidden text-xl opacity-80 lg:block"
+      >
+        ♡
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed bottom-28 left-4 z-20 hidden text-xl opacity-80 lg:block"
+      >
+        ★
+      </div>
 
       <MenuBar />
 
-      <main id="topo" className="mx-auto max-w-5xl px-4 pb-16 pt-10 sm:px-6 relative z-10">
-        
+      <main
+        id="topo"
+        className="relative z-10 mx-auto max-w-5xl px-4 pb-16 pt-8 sm:px-6"
+      >
         {/* HERO / SOBRE */}
-        <div id="sobre" className="scroll-mt-20 transform -rotate-1 transition-transform hover:rotate-0">
-          <Window title="~/sobre.txt (URGENTE)" accent="pink" className="animate-float border-4 border-black shadow-[8px_8px_0px_#000]">
-            <p className="font-mono text-xs text-mauve-soft bg-yellow-200 px-2 py-0.5 inline-block border border-black">
-              janela 1 de 999 — ALTO TEOR DE CAOS E POKÉMON
-            </p>
-            <h1 className="mt-3 font-mono text-4xl font-extrabold leading-tight text-ink-plum sm:text-5xl drop-shadow-[3px_3px_0px_#ff007f]">
-              Vitória Baltazar
-              <span className="ml-1 inline-block h-7 w-2.5 translate-y-1 animate-blink bg-lime-400 align-middle sm:h-8" />
-            </h1>
-            <p className="mt-1 font-mono text-sm font-bold bg-cyan-300 px-2 py-1 inline-block border border-black text-black">
-              VicFelas — Desenvolvedora FullStack & Mestre Pokémon
-            </p>
-            <p className="mt-4 max-w-xl text-sm sm:text-base leading-relaxed font-bold text-black bg-white/80 p-3 border-2 border-dashed border-black">
-              Aprendiz de ADM na Viação Sertanezina e estudante de Ciências da
-              Computação. Construo código com a mesma energia de quem treina um time de Pokémon e ouve MPB no talo (com a supervisão do gato Chico Bento).
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2 font-mono text-xs">
-              <span className="rounded-none border-2 border-black bg-pink-400 px-3 py-1 font-bold shadow-[3px_3px_0px_#000]">
-                Ribeirão Preto, SP 📍
-              </span>
-              <span className="rounded-none border-2 border-black bg-cyan-400 px-3 py-1 font-bold shadow-[3px_3px_0px_#000]">
-                Estácio — Ciência da Computação 🎓
-              </span>
-              <span className="rounded-none border-2 border-black bg-lime-300 px-3 py-1 font-bold shadow-[3px_3px_0px_#000]">
-                Disponível para estágios 🚀
-              </span>
+        <div id="sobre" className="scroll-mt-24">
+          <Window title="~/sobre.txt" accent="pink">
+            <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center gap-2 font-mono text-xs">
+                  <span className="border border-[#3d2b3f] bg-[#ffe4ec] px-2 py-0.5 font-bold text-[#3d2b3f]">
+                    bem-vinda ao vitoria.os ♡
+                  </span>
+                  <span className="border border-dashed border-[#c49bb3] bg-[#fffaf3] px-2 py-0.5 text-[#6d5072]">
+                    arquivo pessoal &amp; dev log
+                  </span>
+                </div>
+
+                <h1 className="mt-3 font-mono text-3xl font-extrabold tracking-tight text-[#3d2b3f] sm:text-5xl">
+                  Vitória Baltazar
+                  <span className="ml-1.5 inline-block h-6 w-2 translate-y-0.5 animate-pulse bg-[#c96b8b] align-middle sm:h-8" />
+                </h1>
+
+                <p className="mt-2 inline-block border border-[#3d2b3f] bg-[#e2f5f8] px-2.5 py-1 font-mono text-xs sm:text-sm font-bold text-[#3d2b3f] shadow-[2px_2px_0px_#3d2b3f]">
+                  VicFelas — Desenvolvedora FullStack &amp; Fã de Pokémon
+                </p>
+
+                <p className="mt-4 max-w-2xl border border-dashed border-[#c49bb3] bg-[#fffaf3] p-3.5 text-sm sm:text-base leading-relaxed text-[#3d2b3f]">
+                  Aprendiz de ADM na Viação Sertanezina e estudante de Ciência da
+                  Computação. Gosto de criar interfaces criativas, projetos
+                  pessoais cheios de personalidade e código funcional — tudo sob a
+                  supervisão atenta do meu gato Chico Bento e ouvindo MPB.
+                </p>
+
+                <div className="mt-4 flex flex-wrap gap-2 font-mono text-xs">
+                  <span className="border-[1.5px] border-[#3d2b3f] bg-[#ffe4ec] px-3 py-1 font-bold text-[#3d2b3f] shadow-[2px_2px_0px_#3d2b3f]">
+                    📍 Sertãozinho / Ribeirão Preto, SP
+                  </span>
+                  <span className="border-[1.5px] border-[#3d2b3f] bg-[#e2f5f8] px-3 py-1 font-bold text-[#3d2b3f] shadow-[2px_2px_0px_#3d2b3f]">
+                    🎓 Ciência da Computação
+                  </span>
+                  <span className="border-[1.5px] border-[#3d2b3f] bg-[#eef7b8] px-3 py-1 font-bold text-[#3d2b3f] shadow-[2px_2px_0px_#3d2b3f]">
+                    ✿ Aberta a oportunidades
+                  </span>
+                </div>
+              </div>
+
+              {/* Cartão lateral fofo estilo cantinho do Pixel Safari */}
+              <aside className="w-full shrink-0 border-2 border-[#3d2b3f] bg-[#fffaf3] p-3 font-mono text-xs shadow-[inset_1px_1px_0px_#ffffff,3px_3px_0px_#3d2b3f] sm:w-52">
+                <div className="mb-2 flex items-center justify-between border-b border-dashed border-[#c49bb3] pb-1.5 font-bold text-[#3d2b3f]">
+                  <span>status.txt</span>
+                  <span className="text-[#c96b8b]">● on</span>
+                </div>
+
+                <div className="flex items-center gap-2.5 border border-[#3d2b3f] bg-[#fffdf9] p-2">
+                  <img
+                    src="/cat52.gif"
+                    alt="Pixel art de gatinho"
+                    className="pixel-art h-10 w-10 shrink-0 object-contain"
+                  />
+                  <div className="leading-snug">
+                    <p className="font-bold text-[#3d2b3f]">Chico Bento</p>
+                    <p className="text-[11px] text-[#6d5072]">chefe de QA 🐈‍⬛</p>
+                  </div>
+                </div>
+
+                <ul className="mt-2.5 space-y-1 text-[11px] text-[#3d2b3f]">
+                  <li className="border border-dashed border-[#d8b4c8] bg-[#fffdf9] px-2 py-1">
+                    <strong>mood:</strong> codando &amp; ouvindo MPB
+                  </li>
+                  <li className="border border-dashed border-[#d8b4c8] bg-[#fffdf9] px-2 py-1">
+                    <strong>stack:</strong> Next.js, TS, Tailwind
+                  </li>
+                </ul>
+              </aside>
+            </div>
+
+            {/* Faixa de stamps / selos retrô */}
+            <div className="mt-5 flex flex-wrap gap-2 border-t border-dashed border-[#c49bb3] pt-4 font-mono text-[11px]">
+              {stamps.map((stamp) => (
+                <span
+                  key={stamp}
+                  className="border border-[#3d2b3f] bg-[#fffdf9] px-2.5 py-0.5 font-semibold text-[#5d4360] shadow-[1.5px_1.5px_0px_#3d2b3f]"
+                >
+                  {stamp}
+                </span>
+              ))}
             </div>
           </Window>
         </div>
 
         {/* PROJETOS */}
-        <div id="projetos" className="scroll-mt-20 mt-12 transform rotate-1">
-          <div className="mb-4 flex items-baseline justify-between bg-black text-white p-2 border-2 border-yellow-300 shadow-[4px_4px_0px_#ffff00]">
-            <h2 className="font-mono text-sm font-bold uppercase tracking-widest">
-              /projetos (Os Brabos)
+        <div id="projetos" className="mt-10 scroll-mt-24">
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-2 border-2 border-[#3d2b3f] bg-[#ffe4ec] px-3.5 py-2 shadow-[3px_3px_0px_#3d2b3f]">
+            <h2 className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3d2b3f]">
+              ✿ /projetos — vitrine de criações
             </h2>
-            <span className="font-mono text-xs text-yellow-300">
-              {projects.length} itens na matrix
+            <span className="border border-[#3d2b3f] bg-[#fffdf9] px-2 py-0.5 font-mono text-[11px] font-bold text-[#3d2b3f]">
+              {projects.length} projetos
             </span>
           </div>
+
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {projects.map((project, idx) => (
-              <div key={project.id} className={`transform ${idx % 2 === 0 ? '-rotate-1' : 'rotate-1'}`}>
-                <ProjectCard project={project} />
-              </div>
+            {projects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         </div>
 
         {/* SKILLS */}
-        <div id="skills" className="scroll-mt-20 mt-12 transform -rotate-1">
-          <h2 className="mb-4 font-mono text-sm font-bold uppercase tracking-widest bg-pink-500 text-white p-2 border-2 border-black shadow-[4px_4px_0px_#000]">
-            /skills (Poderes Mágicos)
-          </h2>
+        <div id="skills" className="mt-10 scroll-mt-24">
+          <div className="mb-4 flex items-center justify-between border-2 border-[#3d2b3f] bg-[#eef7b8] px-3.5 py-2 shadow-[3px_3px_0px_#3d2b3f]">
+            <h2 className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3d2b3f]">
+              ★ /skills — caixinha de ferramentas
+            </h2>
+          </div>
           <SkillsTerminal />
         </div>
 
         {/* POKEMON PARTY */}
-        <div id="pokemon" className="scroll-mt-20 mt-12 transform rotate-1">
-          <h2 className="mb-4 font-mono text-sm font-bold uppercase tracking-widest bg-yellow-300 text-black p-2 border-2 border-black shadow-[4px_4px_0px_#000]">
-            /favoritos (Equipa Pokémon)
-          </h2>
+        <div id="pokemon" className="mt-10 scroll-mt-24">
+          <div className="mb-4 flex items-center justify-between border-2 border-[#3d2b3f] bg-[#e2f5f8] px-3.5 py-2 shadow-[3px_3px_0px_#3d2b3f]">
+            <h2 className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3d2b3f]">
+              ♡ /favoritos — time pokémon
+            </h2>
+          </div>
           <PokemonParty />
         </div>
 
         {/* GENIA CHATBOT */}
-        <div id="genia" className="scroll-mt-20 mt-12 transform -rotate-1">
-          <h2 className="mb-4 font-mono text-sm font-bold uppercase tracking-widest bg-cyan-400 text-black p-2 border-2 border-black shadow-[4px_4px_0px_#000]">
-            /genia (Assistente Virtual)
-          </h2>
+        <div id="genia" className="mt-10 scroll-mt-24">
+          <div className="mb-4 flex items-center justify-between border-2 border-[#3d2b3f] bg-[#ffe4ec] px-3.5 py-2 shadow-[3px_3px_0px_#3d2b3f]">
+            <h2 className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3d2b3f]">
+              ✿ /genia — assistente do sistema
+            </h2>
+          </div>
           <PortfolioChatbot />
         </div>
 
         {/* CONTATO */}
-        <div id="contato" className="scroll-mt-20 mt-12 transform rotate-1">
-          <Window title="contato.exe" accent="sky" className="border-4 border-black shadow-[8px_8px_0px_#ff007f] bg-yellow-100">
-            <h2 className="font-mono text-lg font-bold text-black bg-lime-300 p-1 border border-black inline-block">
-              vamos trocar uma ideia? 📞💥
+        <div id="contato" className="mt-10 scroll-mt-24">
+          <Window title="contato.exe" accent="sky">
+            <h2 className="inline-block border-2 border-[#3d2b3f] bg-[#eef7b8] px-2.5 py-1 font-mono text-base sm:text-lg font-bold text-[#3d2b3f] shadow-[2px_2px_0px_#3d2b3f]">
+              vamos trocar uma ideia? ✉ ♡
             </h2>
-            <p className="mt-3 max-w-md text-sm leading-relaxed font-bold text-black">
-              Aberta a estágios, parcerias em TI ou debates sobre qual a melhor região de Pokémon.
+            <p className="mt-3 max-w-lg border border-dashed border-[#c49bb3] bg-[#fffaf3] p-3 text-sm leading-relaxed text-[#3d2b3f]">
+              Aberta a estágios, freelas, troca de ideias sobre front-end/full-stack
+              ou conversas sobre Pokémon e MPB.
             </p>
-            <div className="mt-4 flex flex-wrap gap-3 font-mono text-sm">
+            <div className="mt-4 flex flex-wrap gap-3 font-mono text-xs sm:text-sm">
               <a
                 href="mailto:vicbaltazar287@icloud.com"
-                className="rounded-none border-2 border-black bg-pink-400 px-4 py-2 font-bold text-black shadow-[4px_4px_0px_#000] transition-transform hover:-translate-y-1 hover:shadow-[6px_6px_0px_#000]"
+                className="border-2 border-[#3d2b3f] bg-[#ffe4ec] px-4 py-2 font-bold text-[#3d2b3f] shadow-[3px_3px_0px_#3d2b3f] transition-all hover:-translate-y-0.5 hover:bg-[#ffd1e0] active:translate-y-0 active:shadow-none"
               >
                 ✉ vicbaltazar287@icloud.com
               </a>
@@ -117,7 +200,7 @@ export default function Home() {
                 href="https://github.com/vicbaltazar"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-none border-2 border-black bg-cyan-400 px-4 py-2 font-bold text-black shadow-[4px_4px_0px_#000] transition-transform hover:-translate-y-1 hover:shadow-[6px_6px_0px_#000]"
+                className="border-2 border-[#3d2b3f] bg-[#e2f5f8] px-4 py-2 font-bold text-[#3d2b3f] shadow-[3px_3px_0px_#3d2b3f] transition-all hover:-translate-y-0.5 hover:bg-[#cbeff5] active:translate-y-0 active:shadow-none"
               >
                 ⌥ github.com/vicbaltazar
               </a>
@@ -125,7 +208,7 @@ export default function Home() {
                 href="https://vicfelas-five.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-none border-2 border-black bg-lime-300 px-4 py-2 font-bold text-black shadow-[4px_4px_0px_#000] transition-transform hover:-translate-y-1 hover:shadow-[6px_6px_0px_#000]"
+                className="border-2 border-[#3d2b3f] bg-[#eef7b8] px-4 py-2 font-bold text-[#3d2b3f] shadow-[3px_3px_0px_#3d2b3f] transition-all hover:-translate-y-0.5 hover:bg-[#e3f296] active:translate-y-0 active:shadow-none"
               >
                 🔗 linktree
               </a>
@@ -135,8 +218,13 @@ export default function Home() {
 
         <Dock />
 
-        <footer className="mt-16 text-center font-mono text-xs bg-black text-lime-300 p-4 border-2 border-yellow-300 shadow-[4px_4px_0px_#ffff00]">
-          VitóriaOS © {new Date().getFullYear()} — Feito com puro caos, Next.js e muita energia 🐸✨
+        <footer className="mt-14 border-2 border-[#3d2b3f] bg-[#fffdf9] p-4 text-center font-mono text-xs text-[#3d2b3f] shadow-[inset_1px_1px_0px_#ffffff,4px_4px_0px_#3d2b3f]">
+          <p className="font-bold">
+            VitóriaOS © {new Date().getFullYear()} — feito com carinho, Next.js &amp; estética indie web ♡
+          </p>
+          <p className="mt-1 text-[11px] text-[#6d5072]">
+            melhor visualizado com um energético e o Chico Bento por perto 🐈‍⬛
+          </p>
         </footer>
       </main>
     </div>
