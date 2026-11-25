@@ -20,7 +20,6 @@ body {
   image-rendering: crisp-edges;
 }
 
-/* Container central clássico do Pixel Safari */
 .safari-shell {
   background-color: #fffafd;
   border-left: 3px solid #f48fb1;
@@ -28,14 +27,12 @@ body {
   box-shadow: 0 0 0 2px #ffffff, 0 0 24px rgba(74, 44, 61, 0.25);
 }
 
-/* Barra de menu rosa logo abaixo do banner */
 .safari-navbar {
   background: linear-gradient(180deg, #ff9ebb 0%, #f4729b 100%);
   border-top: 2px solid #ffc2d4;
   border-bottom: 2px solid #c94a72;
 }
 
-/* Botões rosa estilo Windows 98 / Neocities */
 .safari-pill-btn {
   background: linear-gradient(180deg, #ffb6c9 0%, #f57c9e 100%);
   border-top: 2px solid #ffe0e9;
@@ -60,7 +57,6 @@ body {
   transform: translateY(1px);
 }
 
-/* Moldura interna rosa estilo "renda" do Pixel Safari */
 .safari-lace-box {
   background-color: #ffffff;
   border: 4px double #f48fb1;
@@ -68,14 +64,12 @@ body {
   outline-offset: -6px;
 }
 
-/* Nota amarela estilo "Did you know?" */
 .safari-sticky-note {
   background: linear-gradient(180deg, #ffffd6 0%, #faf3a0 100%);
   border: 1.5px solid #9e9444;
   box-shadow: 2px 2px 0px rgba(74, 44, 61, 0.2);
 }
 
-/* Título principal com contorno colorido estilo Pixel Safari */
 .safari-title-shadow {
   text-shadow:
     2px 2px 0px #ffc2d4,
