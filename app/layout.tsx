@@ -27,6 +27,16 @@ export const metadata: Metadata = {
   title: "Vitória Baltazar — VitóriaOS",
   description:
     "Portfolio de Vitória Baltazar (VicFelas), desenvolvedora FullStack. Projetos, stack e contato num desktop pastel.",
+  icons: {
+    icon: [
+      {
+        url: "/cat52.gif",
+        type: "image/gif",
+      },
+    ],
+    shortcut: "/cat52.gif",
+    apple: "/cat52.gif",
+  },
 };
 
 export default function RootLayout({
