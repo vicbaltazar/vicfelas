@@ -44,11 +44,9 @@ export default function Home() {
         backgroundSize: "480px auto",
       }}
     >
-      {/* COLUNA CENTRAL ESTILO PIXEL SAFARI */}
+      
       <div className="safari-shell mx-auto min-h-screen max-w-[820px]">
-        {/* 1. BANNER DO TOPO */}
         <header className="relative overflow-hidden border-b-2 border-[#f48fb1] bg-[linear-gradient(135deg,#ffd6e7_0%,#fff4d2_48%,#d2f3f8_100%)] px-4 py-7 text-center">
-          {/* Estrelinhas e gatinho decorativos */}
           <div className="mx-auto flex max-w-xl items-center justify-center gap-3">
             <img
               src="/cat52.gif"
@@ -69,7 +67,6 @@ export default function Home() {
           </p>
         </header>
 
-        {/* 2. BARRA DE NAVEGAÇÃO ROSA */}
         <nav
           aria-label="Menu principal"
           className="safari-navbar sticky top-0 z-30 flex flex-wrap items-center justify-center gap-x-5 gap-y-1 px-3 py-1.5 font-mono text-xs font-bold text-white"
@@ -85,9 +82,7 @@ export default function Home() {
           ))}
         </nav>
 
-        {/* CONTEÚDO PRINCIPAL */}
         <main className="px-4 py-6 sm:px-7">
-          {/* 3. BOAS-VINDAS CENTRALIZADO */}
           <section id="sobre" className="scroll-mt-14 text-center">
             <div className="flex items-center justify-center gap-2">
               <span className="text-lg">🌸</span>
@@ -104,7 +99,7 @@ export default function Home() {
             <p className="mx-auto mt-3 max-w-2xl text-xs sm:text-[13px] leading-relaxed text-[#4a2c3d]">
               Olá! Eu sou a <strong>Vitória Baltazar (VicFelas)</strong>, aprendiz de ADM na
               Viação Sertanezina e graduanda em Ciência da Computação. Este é o meu cantinho
-              na web — onde reúno meus projetos em React, Next.js, TypeScript e Python,
+              na web, onde reúno meus projetos em React, Next.js, TypeScript e Python,
               supervisionados pelo meu gato <strong>Chico Bento</strong> e ao som de muita MPB.
             </p>
 
@@ -112,12 +107,10 @@ export default function Home() {
               Feito com carinho em Sertãozinho / Ribeirão Preto, SP • Melhor visualizado com cafézinho ☕
             </p>
 
-            {/* 4. FAIXA DE AVISO ESTILO PIXEL SAFARI */}
             <div className="mx-auto mt-4 max-w-xl border border-[#8fa858] bg-[#eef8c8] px-3 py-1.5 font-mono text-[11px] font-bold text-[#3f5219] shadow-[1px_1px_0px_#ffffff_inset]">
               ⚠️ Este portfólio contém alta dose de pixel art, Pokémon e MPB. Explore à vontade! ✿
             </div>
 
-            {/* 5. FILEIRA DE BOTÕES ROSA 3D */}
             <div className="mt-4">
               <p className="mb-2 font-mono text-[11px] text-[#6e465b]">
                 Navegue rápido pelas seções e links:
@@ -137,11 +130,9 @@ export default function Home() {
               </div>
             </div>
           </section>
-
-          {/* 6. CAIXA COM BORDA DE RENDA (CONTADOR + STATUS + DID YOU KNOW?) */}
+          
           <section className="safari-lace-box mt-6 p-4 sm:p-5">
             <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-12">
-              {/* Coluna Esquerda: Status + Contador Retrô */}
               <div className="flex flex-col items-center gap-2.5 text-center md:col-span-4">
                 <div className="w-full border border-[#d69b27] bg-[repeating-linear-gradient(-45deg,#ffe066,#ffe066_8px,#4a2c3d_8px,#4a2c3d_16px)] p-1">
                   <div className="bg-[#fffdf5] px-2 py-0.5 font-mono text-[11px] font-extrabold text-[#4a2c3d]">
@@ -149,7 +140,6 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Badges de identidade / interesses */}
                 <div className="flex flex-wrap justify-center gap-1.5 font-mono text-[10px] font-bold">
                   <span className="border border-[#f48fb1] bg-[#ffe4ec] px-2 py-0.5 text-[#8f294b]">
                     FullStack Dev
@@ -162,7 +152,6 @@ export default function Home() {
                   </span>
                 </div>
 
-                {/* Hit Counter estilo Pixel Safari */}
                 <div className="w-full rounded-lg border-2 border-dotted border-[#f48fb1] bg-[#fff5f9] p-2 font-mono">
                   <p className="text-[10px] font-bold text-[#b83b62]">
                     VitóriaOS já recebeu...
@@ -181,7 +170,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Coluna Central: Mascote / Destaque Visual */}
               <div className="flex flex-col items-center justify-center text-center md:col-span-4">
                 <div className="relative flex h-28 w-28 items-center justify-center rounded-full border-2 border-dashed border-[#f48fb1] bg-[#fff5f9]">
                   <img
@@ -195,7 +183,6 @@ export default function Home() {
                 </span>
               </div>
 
-              {/* Coluna Direita: Caixinha "Did you know?" igual da foto */}
               <div className="md:col-span-4">
                 <div className="safari-sticky-note p-3 font-mono text-[11px] text-[#4a3e12]">
                   <p className="mb-1 border-b border-[#c9be6b] pb-1 font-extrabold">
@@ -218,7 +205,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 7. PROJETOS DENTRO DA ESTRUTURA */}
             <div id="projetos" className="mt-7 scroll-mt-14 border-t-2 border-dashed border-[#f8bbd0] pt-5">
               <div className="mb-3 flex items-center justify-between">
                 <h3 className="font-mono text-sm font-extrabold text-[#b83b62]">
@@ -235,7 +221,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 8. SKILLS */}
             <div id="skills" className="mt-7 scroll-mt-14 border-t-2 border-dashed border-[#f8bbd0] pt-5">
               <h3 className="mb-3 font-mono text-sm font-extrabold text-[#b83b62]">
                 ★ Stack &amp; Ferramentas
@@ -243,7 +228,6 @@ export default function Home() {
               <SkillsTerminal />
             </div>
 
-            {/* 9. POKÉMON PARTY */}
             <div id="pokemon" className="mt-7 scroll-mt-14 border-t-2 border-dashed border-[#f8bbd0] pt-5">
               <h3 className="mb-3 font-mono text-sm font-extrabold text-[#b83b62]">
                 ♡ Equipa Pokémon Favorita
@@ -251,7 +235,6 @@ export default function Home() {
               <PokemonParty />
             </div>
 
-            {/* 10. GENIA CHATBOT */}
             <div id="genia" className="mt-7 scroll-mt-14 border-t-2 border-dashed border-[#f8bbd0] pt-5">
               <h3 className="mb-3 font-mono text-sm font-extrabold text-[#b83b62]">
                 🤖 Fale com a GenIA
@@ -259,7 +242,6 @@ export default function Home() {
               <PortfolioChatbot />
             </div>
 
-            {/* 11. CONTATO */}
             <div
               id="contato"
               className="mt-7 scroll-mt-14 border-t-2 border-dashed border-[#f8bbd0] pt-5 text-center"
@@ -297,7 +279,6 @@ export default function Home() {
             </div>
           </section>
 
-          {/* 12. FILEIRA DE 88x31 STAMPS / BUTTONS NO RODAPÉ (IGUAL AO PIXEL SAFARI) */}
           <footer className="mt-5 text-center">
             <div className="flex flex-wrap items-center justify-center gap-1.5">
               {miniStamps.map((stamp) => (
