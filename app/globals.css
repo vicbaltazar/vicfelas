@@ -2,38 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes floatPixel {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-3px); }
-}
-
-.animate-gradientBG {
-  animation: gradientBG 10s ease infinite;
-}
-
-.animate-float-pixel {
-  animation: floatPixel 2.5s steps(2, end) infinite;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #fffaf3;
-  color: #3d2b3f;
-  background-image:
-    linear-gradient(to right, rgba(255, 182, 193, 0.22) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 182, 193, 0.22) 1px, transparent 1px),
-    radial-gradient(rgba(176, 224, 230, 0.35) 1.5px, transparent 1.5px);
-  background-size: 20px 20px, 20px 20px, 40px 40px;
-  background-position: 0 0, 0 0, 10px 10px;
+  color: #4a2c3d;
+  background-color: #fff5f8;
+  background-image: url("/bg-kittens.jpg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 480px auto;
 }
 
 .pixel-art {
@@ -41,117 +20,84 @@ body {
   image-rendering: crisp-edges;
 }
 
-.pixel-window {
-  background-color: #fffdf9;
-  border: 2px solid #3d2b3f;
-  box-shadow:
-    inset 2px 2px 0px #ffffff,
-    inset -2px -2px 0px #f3e5f5,
-    4px 4px 0px #3d2b3f;
+/* Container central clássico do Pixel Safari */
+.safari-shell {
+  background-color: #fffafd;
+  border-left: 3px solid #f48fb1;
+  border-right: 3px solid #f48fb1;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 24px rgba(74, 44, 61, 0.25);
 }
 
-.pixel-window-bar {
-  border-bottom: 2px solid #3d2b3f;
-  background: repeating-linear-gradient(
-    -45deg,
-    #ffd6e0,
-    #ffd6e0 8px,
-    #fff0f5 8px,
-    #fff0f5 16px
-  );
+/* Barra de menu rosa logo abaixo do banner */
+.safari-navbar {
+  background: linear-gradient(180deg, #ff9ebb 0%, #f4729b 100%);
+  border-top: 2px solid #ffc2d4;
+  border-bottom: 2px solid #c94a72;
 }
 
-.pixel-dotted-box {
-  background-color: #fffaf3;
-  border: 2px dashed #c49bb3;
+/* Botões rosa estilo Windows 98 / Neocities */
+.safari-pill-btn {
+  background: linear-gradient(180deg, #ffb6c9 0%, #f57c9e 100%);
+  border-top: 2px solid #ffe0e9;
+  border-left: 2px solid #ffe0e9;
+  border-right: 2px solid #b83b62;
+  border-bottom: 2px solid #b83b62;
+  color: #fffdfd;
+  text-shadow: 1px 1px 0px #a62c52;
+  transition: transform 0.06s steps(2);
 }
 
-.pixel-btn {
-  background-color: #fffdf9;
-  border: 2px solid #3d2b3f;
-  box-shadow: 2px 2px 0px #3d2b3f;
-  transition: transform 0.06s steps(2), box-shadow 0.06s steps(2), background-color 0.1s ease;
+.safari-pill-btn:hover {
+  background: linear-gradient(180deg, #ffc4d4 0%, #f88ca9 100%);
+  transform: translateY(-1px);
 }
 
-.pixel-btn:hover {
-  background-color: #ffe8ef;
+.safari-pill-btn:active {
+  border-top: 2px solid #b83b62;
+  border-left: 2px solid #b83b62;
+  border-right: 2px solid #ffe0e9;
+  border-bottom: 2px solid #ffe0e9;
+  transform: translateY(1px);
 }
 
-.pixel-btn:active {
-  transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px #3d2b3f;
+/* Moldura interna rosa estilo "renda" do Pixel Safari */
+.safari-lace-box {
+  background-color: #ffffff;
+  border: 4px double #f48fb1;
+  outline: 2px dashed #ffb6c9;
+  outline-offset: -6px;
 }
 
-.pixel-tag {
-  background-color: #e6f6f8;
-  border: 1.5px solid #3d2b3f;
-  box-shadow: 1.5px 1.5px 0px #3d2b3f;
+/* Nota amarela estilo "Did you know?" */
+.safari-sticky-note {
+  background: linear-gradient(180deg, #ffffd6 0%, #faf3a0 100%);
+  border: 1.5px solid #9e9444;
+  box-shadow: 2px 2px 0px rgba(74, 44, 61, 0.2);
 }
 
-.pixel-divider {
-  border: 0;
-  height: 2px;
-  background-image: linear-gradient(
-    to right,
-    #ffb6c1 50%,
-    transparent 50%
-  );
-  background-size: 8px 2px;
-}
-
-.crt-overlay {
-  pointer-events: none;
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(61, 43, 63, 0.025),
-    rgba(61, 43, 63, 0.025) 1px,
-    transparent 1px,
-    transparent 3px
-  );
-  mix-blend-mode: multiply;
-}
-
-.crt-vignette {
-  pointer-events: none;
-  position: fixed;
-  inset: 0;
-  z-index: 49;
-  box-shadow: inset 0 0 180px rgba(61, 43, 63, 0.14);
+/* Título principal com contorno colorido estilo Pixel Safari */
+.safari-title-shadow {
+  text-shadow:
+    2px 2px 0px #ffc2d4,
+    -1px -1px 0px #ffffff,
+    0px 2px 0px #f48fb1;
 }
 
 ::selection {
-  background: #dde874;
-  color: #3d2b3f;
+  background: #ffb6c9;
+  color: #4a2c3d;
 }
 
 ::-webkit-scrollbar {
   width: 14px;
-  height: 14px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #fff3f6;
-  border-left: 2px solid #3d2b3f;
+  background: #ffe6ee;
+  border-left: 1px solid #f48fb1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #b0e0e6;
-  border: 2px solid #3d2b3f;
-  box-shadow: inset 1px 1px 0px #ffffff;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #ffb6c1;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
-  }
+  background: linear-gradient(180deg, #ffb6c9, #f4729b);
+  border: 2px solid #ffe6ee;
 }
